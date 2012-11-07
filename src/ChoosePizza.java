@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 
 public class ChoosePizza {
 	
@@ -40,6 +44,47 @@ int cake(int c){
 		void Bolognese(){
 		System.out.println("Wybrałes pizze Bolognese");
 		}
+void choosepizza() throws IOException{
+	String s3;
+	int x3;
+	System.out.println("Podaj jaka pizze wybierasz");
+	BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in),1);
+	s3 = stdin.readLine();
+	x3 = Integer.parseInt(s3);
+	
+	if (x3 == 1){
+		System.out.println("Wybrałes Margeritte");
+		}
+		else
+	if (x3 == 2){
+		System.out.println("Wybrałes Capricosse");
+
+		}
+		else 
+	if(x3 == 3){
+		System.out.println("Wybrałes Salami");
+		}
+		else
+	if(x3 == 4){
+		System.out.println("Wybrałes Pepperoni");
+			}
+	if(x3 == 5){
+		System.out.println("Wybrałes Mafijna");
+		}
+		else
+	if(x3 == 6){
+		System.out.println("Wybrałes Chili");
+				}
+	if(x3 == 7){
+		System.out.println("Wybrałes Bolognese");
+		}
+		else
+			if(x3 >7){
+				System.out.println("Nie ma takiego ciasta. Podaj jeszcze raz");
+				choosepizza();
+			}
+	}
 }
+
 
 

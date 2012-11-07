@@ -46,23 +46,28 @@ void Choose() throws IOException{
 	s = stdin.readLine();
 	x1 = Integer.parseInt(s);
 	
-	if (x1 == 1){
-		System.out.println("Wybrałes cienkie ciasto");
+if (x1 == 1){
+	System.out.println("Wybrałes cienkie ciasto");
 	}
-		else
-	if (x1 == 2){
-		System.out.println("Wybrałes grube ciasto");
+	else
+if (x1 == 2){
+	System.out.println("Wybrałes grube ciasto");
 
 	}
 	else 
-		if(x1 == 3){
-		System.out.println("Wybrałes extra ciasto");
+if(x1 == 3){
+	System.out.println("Wybrałes extra ciasto");
 	}
+	else
+		if(x1 >3){
+			System.out.println("Nie ma takiego ciasta. Podaj jeszcze raz");
+			Choose();
+		}
 }
 
 
-void cake() throws IOException{
-	System.out.println("Wybrales"+x1+"ciasto, jezeli chcesz przerwac wciśnij 0");
+void DeleteCake() throws IOException{
+	System.out.println("Wybrales ciasto, jezeli chcesz przerwac wciśnij 0");
 	BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in),1);
 	s1 = stdin.readLine();
 	x2 = Integer.parseInt(s1);
@@ -72,15 +77,6 @@ void cake() throws IOException{
 	}
 	else
 		System.out.println("Robimy");
-}
-
-
-
-public static void main(String[] args) throws IOException {
-	ChooseCake a = new ChooseCake();
-	cakemachine x = new cakemachine();
-
-	a.Choose(1);
 }
 }
 
