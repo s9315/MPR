@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class ChooseCake {
+class ChooseCake  {
 
 int cake(int b){
 	int a=1;
