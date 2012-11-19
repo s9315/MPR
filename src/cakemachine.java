@@ -33,6 +33,7 @@ public void Choose(int i) {
 }
 }
 public class cakemachine{
+	private static final int Y = 0;
 	String s;
 	String s1;
 	String s2;
@@ -67,16 +68,23 @@ if(x1 == 3){
 
 
 void DeleteCake() throws IOException{
-	System.out.println("Wybrales ciasto, jezeli chcesz przerwac wciśnij 0");
+	System.out.println("Wybrales ciasto, jezeli chcesz przerwac wciśnij 0 lub 5 aby zatwierdzic");
 	BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in),1);
 	s1 = stdin.readLine();
 	x2 = Integer.parseInt(s1);
 	
-	if (x2 == 0){
+	if (x2 ==0){
 		System.out.println("Kasujemy zamowienie");
 	}
 	else
-		System.out.println("Robimy");
-}
-}
+	if(x2== 5){
+		System.out.println("Robimy pizze teraz wplac pieniadze");
+	}
+	else
+		if(x2 != 0 ^ x2 != 5){
 
+	System.out.println("Nie ten klawisz podaj jeszcze raz");
+	DeleteCake();
+	}
+}
+}
