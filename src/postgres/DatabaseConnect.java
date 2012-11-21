@@ -1,4 +1,4 @@
-package mysql;
+package postgres;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +13,7 @@ public class DatabaseConnect {
 // to musi byæ - tyle w temacie
 Class.forName("com.mysql.jdbc.Driver");
 // "jdbc:mysql://nazwa_serwera:port/bazadanych","uzytkownik","haslo"
-Connection con = DriverManager.getConnection("jdbc:mysql://localhost:5432/postgres","postgres","");
+Connection con = DriverManager.getConnection("jdbc:postgres://localhost:5432/postgres","postgres","");
 // "dowolna kwerenda; statement ja przechowuje - > result wykonuje i przechowuje
 PreparedStatement statement = con.prepareStatement("select * from klient");
 ResultSet result = statement.executeQuery();

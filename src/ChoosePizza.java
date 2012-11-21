@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class ChoosePizza {
+public class ChoosePizza extends cakemachine{
 	
 int cake(int c){
 			int a=1;
@@ -24,27 +24,29 @@ int cake(int c){
 			return a;
 		}
 		void Margerita(){
-			System.out.println("Wybrałes pizze Margerite");
+			System.out.println("Wybrałes pizze Margerite. Koszt mała:10zł Duża 14zł Mega 45 zł");
+			System.out.println("Skladniki: Sos, Ser, Szynka");
 		}
 		void Capricossa(){
-		System.out.println("Wybrałes pizze Capricosse");
+		System.out.println("Wybrałes pizze Capricosse. Koszt mała:11zł Duża 15zł Mega 46 zł");
 		}
 		void Salami(){
-		System.out.println("Wybrałes pizze Salami");
+		System.out.println("Wybrałes pizze Salami. Koszt mała:12zł Duża 16zł Mega 47 zł");
 		}
 		void Pepperoni(){
-		System.out.println("Wybrałes pizze Pepperoni");
+		System.out.println("Wybrałes pizze Pepperoni. Koszt mała:13zł Duża 17zł Mega 48 zł");
 		}
 		void Mafijna(){
-		System.out.println("Wybrałes pizze Mafijna");
+		System.out.println("Wybrałes pizze Mafijna. Koszt mała:14zł Duża 18zł Mega 49 zł");
 		}
 		void Chilli(){
-		System.out.println("Wybrałes pizze Chili");
+		System.out.println("Wybrałes pizze ChiliKoszt mała:15zł Duża 19zł Mega 50 zł. ");
 		}
 		void Bolognese(){
-		System.out.println("Wybrałes pizze Bolognese");
+		System.out.println("Wybrałes pizze Bolognese. Koszt mała:16zł Duża 20zł Mega 51 zł");
 		}
-void choosepizza() throws IOException{
+void choosepizza() throws IOException
+{
 	String s3;
 	int x3;
 	System.out.println("Podaj jaka pizze wybierasz");
@@ -53,38 +55,46 @@ void choosepizza() throws IOException{
 	x3 = Integer.parseInt(s3);
 	
 	if (x3 == 1){
-		System.out.println("Wybrałes Margeritte");
+		Margerita();
 		}
 		else
 	if (x3 == 2){
-		System.out.println("Wybrałes Capricosse");
-
+		Capricossa();
 		}
 		else 
 	if(x3 == 3){
-		System.out.println("Wybrałes Salami");
+		Salami();
 		}
 		else
 	if(x3 == 4){
-		System.out.println("Wybrałes Pepperoni");
+		Pepperoni();
 			}
 	if(x3 == 5){
-		System.out.println("Wybrałes Mafijna");
+		Mafijna();
 		}
 		else
 	if(x3 == 6){
-		System.out.println("Wybrałes Chili");
-				}
+		Chilli();		
+	}
 	if(x3 == 7){
-		System.out.println("Wybrałes Bolognese");
-		}
+		Bolognese();
+	}
 		else
 			if(x3 >7){
-				System.out.println("Nie ma takiego ciasta. Podaj jeszcze raz");
+				System.out.println("Nie ma takiej pizzy. Podaj jeszcze raz");
 				choosepizza();
 			}
 	}
+
+
+void pay() throws IOException{
+	String s4;
+	int x4;
+	
+	System.out.println("Podaj ilosc jaką placisz?");
+	BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in),1);
+	s4 = stdin.readLine();
+	x4 = Integer.parseInt(s4);
+	
 }
-
-
-
+}
