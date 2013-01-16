@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-public class ChoosePizza extends cakemachine{
+public class ChoosePizza{
 	
 int cake(int c){
 			int a=1;
@@ -40,7 +40,7 @@ int cake(int c){
 		System.out.println("Wybrałes pizze Mafijna. Koszt mała:14zł Duża 18zł Mega 49 zł");
 		}
 		void Chilli(){
-		System.out.println("Wybrałes pizze ChiliKoszt mała:15zł Duża 19zł Mega 50 zł. ");
+		System.out.println("Wybrałes pizze ChiliKoszt 16 ");
 		}
 		void Bolognese(){
 		System.out.println("Wybrałes pizze Bolognese. Koszt mała:16zł Duża 20zł Mega 51 zł");

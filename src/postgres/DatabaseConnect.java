@@ -8,20 +8,15 @@ import java.sql.Statement;
 import java.sql.SQLException;
 
 public class DatabaseConnect {
-	public static void main(String[] args) throws Exception
-{
-// to musi byæ - tyle w temacie
-Class.forName("com.mysql.jdbc.Driver");
-// "jdbc:mysql://nazwa_serwera:port/bazadanych","uzytkownik","haslo"
-Connection con = DriverManager.getConnection("jdbc:postgres://localhost:5432/postgres","postgres","");
-// "dowolna kwerenda; statement ja przechowuje - > result wykonuje i przechowuje
-PreparedStatement statement = con.prepareStatement("select * from klient");
+
+public static void main(String[] args) throws Exception {
+
+Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","postgres");
+PreparedStatement statement = con.prepareStatement("select * from pizza");
 ResultSet result = statement.executeQuery();
-while(result.next())
-{
-// wylistowanie rezultatu kwerendy "select * from users" (kolumny indeksowane sa od 1)
-System.out.println(result.getString(1) + " " + result.getString(2) + " " + result.getString(3) + " " + result.getString(4));
-}
+while(result.next()){
+System.out.println(result.getString(1) + " " + result.getString(2) + " " + result.getString(3));
 }
 }
 
+}

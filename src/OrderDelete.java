@@ -25,7 +25,7 @@ System.out.println("Przerwanie wyboru");
 }
 
 void DeleteCake() throws IOException{
-	System.out.println("Wybrales ciasto i pizze, jezeli chcesz przerwac wciśnij 1 lub 2 aby zatwierdzic");
+	System.out.println("Wybrales pizze, jezeli chcesz przerwac wciśnij 1 lub 2 aby zatwierdzic");
 	BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in),1);
 	s1 = stdin.readLine();
 	x2 = Integer.parseInt(s1);
